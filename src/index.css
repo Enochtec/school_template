@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+/* Custom animations used in Home hero */
+@keyframes morph {
+  0%, 100% { border-radius: 60% 40% 55% 45% / 50% 45% 55% 50%; }
+  33%       { border-radius: 40% 60% 45% 55% / 55% 50% 45% 50%; }
+  66%       { border-radius: 50% 50% 60% 40% / 40% 60% 50% 50%; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-10px); }
+}
+
+.animate-morph  { animation: morph  6s ease-in-out infinite; }
+.animate-float  { animation: float  3s ease-in-out infinite; }
+.animate-float-d1 { animation: float 3s ease-in-out 1s infinite; }
+.animate-float-d2 { animation: float 3s ease-in-out 2s infinite; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #FFFBF5;
+}
