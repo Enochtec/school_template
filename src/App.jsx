@@ -7,6 +7,8 @@ import About from './pages/About'
 import Programs from './pages/Programs'
 import Gallery from './pages/Gallery'
 import Contact from './pages/Contact'
+import Payment from './pages/Payment'
+import Payments from './pages/Payments'
 import './App.css'
 
 function App() {
@@ -20,6 +22,8 @@ function App() {
           <Route path="/programs" element={<Programs />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/pay" element={<Payment />} />
+          <Route path="/payments" element={<Payments />} />
         </Routes>
       </main>
       <Footer />

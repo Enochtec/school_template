@@ -8,6 +8,7 @@ const links = [
   { to: '/programs', label: 'Programs' },
   { to: '/gallery', label: 'Gallery' },
   { to: '/contact', label: 'Contact' },
+  { to: '/payments', label: 'Payments' },
 ]
 
 const navLinkClass = ({ isActive }) =>
@@ -51,8 +52,8 @@ export default function Navbar() {
             </li>
           ))}
           <li>
-            <Link to="/contact" className="ml-2 px-5 py-2 bg-white text-orange-700 rounded-full text-sm font-bold hover:bg-orange-50 transition-colors">
-              Enroll Now
+            <Link to="/pay" className="ml-2 px-5 py-2 bg-white text-orange-700 rounded-full text-sm font-bold hover:bg-orange-50 transition-colors">
+              Pay School Fees
             </Link>
           </li>
         </ul>
@@ -76,11 +77,11 @@ export default function Navbar() {
             </NavLink>
           ))}
           <Link
-            to="/contact"
+            to="/pay"
             className="mt-2 px-4 py-2.5 bg-white text-orange-700 rounded-xl text-sm font-bold hover:bg-orange-50 transition-colors text-center"
             onClick={() => setMenuOpen(false)}
           >
-            Enroll Now
+            Pay School Fees
           </Link>
         </div>
       )}
