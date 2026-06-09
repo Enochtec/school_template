@@ -1,9 +1,9 @@
-import { useState, useEffect } from 'react'
+﻿import { useState, useEffect } from 'react'
 import { X, Send, CheckCircle } from 'lucide-react'
 
 const inputClass = (hasError) =>
   `w-full px-4 py-2.5 rounded-xl border-2 text-sm text-stone-800 bg-white outline-none transition-colors ${
-    hasError ? 'border-red-400' : 'border-stone-200 focus:border-orange-600'
+    hasError ? 'border-red-400' : 'border-stone-200 focus:border-orange-800'
   }`
 
 export default function EnrollModal({ onClose }) {
@@ -55,7 +55,7 @@ export default function EnrollModal({ onClose }) {
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="bg-orange-600 rounded-t-3xl px-8 py-6 flex items-start justify-between">
+        <div className="bg-orange-800 rounded-t-3xl px-8 py-6 flex items-start justify-between">
           <div>
             <h2 className="text-xl font-extrabold text-white">Enroll Your Child</h2>
             <p className="text-orange-100 text-sm mt-1">We'll confirm your spot within 24 hours.</p>
@@ -72,7 +72,7 @@ export default function EnrollModal({ onClose }) {
         <div className="px-8 py-6">
           {submitted ? (
             <div className="text-center py-6">
-              <CheckCircle size={56} className="text-orange-600 mx-auto mb-4" strokeWidth={1.5} />
+              <CheckCircle size={56} className="text-orange-800 mx-auto mb-4" strokeWidth={1.5} />
               <h3 className="text-xl font-bold text-stone-900 mb-2">Application Received!</h3>
               <p className="text-stone-500 mb-6">
                 Thank you, <strong>{form.name}</strong>! Our admissions team will contact you at{' '}
@@ -80,7 +80,7 @@ export default function EnrollModal({ onClose }) {
               </p>
               <button
                 onClick={onClose}
-                className="px-7 py-2.5 bg-orange-600 text-white rounded-full font-semibold hover:bg-orange-700 transition-colors text-sm"
+                className="px-7 py-2.5 bg-orange-800 text-white rounded-full font-semibold hover:bg-orange-900 transition-colors text-sm"
               >
                 Done
               </button>
@@ -142,7 +142,7 @@ export default function EnrollModal({ onClose }) {
               </div>
 
               <button type="submit"
-                className="w-full flex items-center justify-center gap-2 py-3 bg-orange-600 text-white rounded-full font-bold hover:bg-orange-700 transition-colors">
+                className="w-full flex items-center justify-center gap-2 py-3 bg-orange-800 text-white rounded-full font-bold hover:bg-orange-900 transition-colors">
                 <Send size={15} /> Submit Application
               </button>
             </form>

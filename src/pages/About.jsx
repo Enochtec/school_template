@@ -1,8 +1,8 @@
-import { useState } from 'react'
+﻿import { useState } from 'react'
 import { Heart, Star, Users, Globe, Target, Eye, User } from 'lucide-react'
 
 const Tag = ({ children }) => (
-  <span className="inline-block px-3 py-1 text-xs font-bold text-orange-700 bg-orange-100 rounded-full uppercase tracking-wide mb-3">
+  <span className="inline-block px-3 py-1 text-xs font-bold text-orange-900 bg-orange-100 rounded-full uppercase tracking-wide mb-3">
     {children}
   </span>
 )
@@ -37,7 +37,7 @@ function TeamCard({ member: m }) {
     <div className="bg-orange-50 border border-stone-200 rounded-2xl p-6 text-center hover:shadow-lg transition-shadow">
       <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-4 border-white shadow-md">
         {imgFailed ? (
-          <div className="w-full h-full bg-orange-100 flex items-center justify-center text-orange-700">
+          <div className="w-full h-full bg-orange-100 flex items-center justify-center text-orange-900">
             <User size={36} strokeWidth={1.5} />
           </div>
         ) : (
@@ -50,7 +50,7 @@ function TeamCard({ member: m }) {
         )}
       </div>
       <h3 className="font-bold text-stone-900 mb-1">{m.name}</h3>
-      <p className="text-orange-700 font-medium text-sm mb-1">{m.role}</p>
+      <p className="text-orange-900 font-medium text-sm mb-1">{m.role}</p>
       <p className="text-stone-400 text-xs">{m.exp}</p>
     </div>
   )
@@ -80,14 +80,14 @@ export default function About() {
             <div className="flex flex-wrap gap-3">
               {milestones.map(({ year, label }) => (
                 <div key={year} className="bg-orange-100 rounded-xl px-4 py-3 text-center">
-                  <span className="block text-xl font-extrabold text-orange-700">{year}</span>
-                  <span className="block text-xs font-semibold text-orange-700 mt-0.5">{label}</span>
+                  <span className="block text-xl font-extrabold text-orange-900">{year}</span>
+                  <span className="block text-xs font-semibold text-orange-900 mt-0.5">{label}</span>
                 </div>
               ))}
             </div>
           </div>
           <div className="flex flex-col gap-4">
-            <div className="bg-orange-600 rounded-2xl p-10 text-center text-white">
+            <div className="bg-orange-800 rounded-2xl p-10 text-center text-white">
               <div className="w-24 h-24 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <User size={52} strokeWidth={1.2} />
               </div>
@@ -96,7 +96,7 @@ export default function About() {
             <div className="grid grid-cols-3 gap-3">
               {[['120+', 'Children'], ['30+', 'Staff'], ['15+', 'Years']].map(([val, lbl]) => (
                 <div key={lbl} className="bg-white border border-stone-200 rounded-xl p-4 text-center">
-                  <span className="block text-2xl font-extrabold text-orange-600">{val}</span>
+                  <span className="block text-2xl font-extrabold text-orange-800">{val}</span>
                   <span className="block text-xs text-stone-500 mt-1">{lbl}</span>
                 </div>
               ))}
@@ -109,7 +109,7 @@ export default function About() {
       <section className="bg-white py-20">
         <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="bg-orange-50 border border-orange-200 rounded-2xl p-8">
-            <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center text-orange-700 mb-4"><Target size={24} /></div>
+            <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center text-orange-900 mb-4"><Target size={24} /></div>
             <h3 className="text-xl font-bold text-stone-900 mb-3">Our Mission</h3>
             <p className="text-stone-500 leading-relaxed">To provide a nurturing, stimulating, and inclusive learning environment that fosters the holistic development of every child — intellectually, socially, emotionally, and physically — preparing them for lifelong success.</p>
           </div>
@@ -132,7 +132,7 @@ export default function About() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {values.map((v) => (
               <div key={v.title} className="bg-white border border-stone-200 rounded-2xl p-6 text-center hover:shadow-lg transition-shadow">
-                <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center text-orange-700 mx-auto mb-4">{v.icon}</div>
+                <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center text-orange-900 mx-auto mb-4">{v.icon}</div>
                 <h3 className="font-bold text-stone-900 mb-2">{v.title}</h3>
                 <p className="text-stone-500 text-sm leading-relaxed">{v.desc}</p>
               </div>

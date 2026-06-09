@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+﻿import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import {
   Smartphone, User, Mail, Phone, Banknote, CreditCard, Loader2,
@@ -8,7 +8,7 @@ import { apiGet, apiPost } from '../lib/api'
 
 const inputClass = (hasError) =>
   `w-full pl-11 pr-4 py-3 rounded-xl border-2 text-sm text-stone-800 bg-white outline-none transition-colors ${
-    hasError ? 'border-red-400' : 'border-stone-200 focus:border-orange-600'
+    hasError ? 'border-red-400' : 'border-stone-200 focus:border-orange-800'
   }`
 
 const PAYMENT_METHODS = [
@@ -117,7 +117,7 @@ export default function Payment() {
       <div className="max-w-3xl mx-auto px-4 sm:px-6">
 
         <header className="text-center mb-10">
-          <span className="inline-block px-3 py-1 text-xs font-bold text-orange-700 bg-orange-100 rounded-full uppercase tracking-wide mb-3">
+          <span className="inline-block px-3 py-1 text-xs font-bold text-orange-900 bg-orange-100 rounded-full uppercase tracking-wide mb-3">
             Secure Payment
           </span>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-stone-900">Pay School Fees</h1>
@@ -128,7 +128,7 @@ export default function Payment() {
         </header>
 
         <div className="bg-white rounded-3xl shadow-sm border border-stone-100 overflow-hidden">
-          <div className="bg-orange-600 px-6 sm:px-8 py-5 text-white flex items-center justify-between">
+          <div className="bg-orange-800 px-6 sm:px-8 py-5 text-white flex items-center justify-between">
             <div>
               <h2 className="font-bold text-lg">Sunshine ECDE School</h2>
               <p className="text-orange-100 text-xs">Daraja sandbox · M-Pesa STK Push</p>
@@ -155,7 +155,7 @@ export default function Payment() {
                           m.disabled
                             ? 'border-stone-100 text-stone-300 cursor-not-allowed'
                             : form.method === m.id
-                            ? 'border-orange-600 bg-orange-50 text-orange-700'
+                            ? 'border-orange-800 bg-orange-50 text-orange-900'
                             : 'border-stone-200 text-stone-600 hover:border-stone-300'
                         }`}
                       >
@@ -237,7 +237,7 @@ export default function Payment() {
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="w-full flex items-center justify-center gap-2 py-3.5 bg-orange-600 text-white rounded-full font-bold hover:bg-orange-700 transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
+                  className="w-full flex items-center justify-center gap-2 py-3.5 bg-orange-800 text-white rounded-full font-bold hover:bg-orange-900 transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
                 >
                   {submitting ? <Loader2 size={18} className="animate-spin" /> : <Smartphone size={18} />}
                   {submitting ? 'Sending STK Push…' : 'Pay with M-Pesa'}
@@ -252,7 +252,7 @@ export default function Payment() {
             {stage === 'waiting' && (
               <div className="py-10 text-center">
                 <div className="mx-auto w-20 h-20 rounded-full bg-orange-100 flex items-center justify-center mb-5">
-                  <Smartphone size={36} className="text-orange-600" />
+                  <Smartphone size={36} className="text-orange-800" />
                 </div>
                 <h3 className="text-xl font-bold text-stone-900 mb-2">
                   Check your phone for the M-Pesa prompt
@@ -261,7 +261,7 @@ export default function Payment() {
                   We've sent an STK Push to <strong>{form.phone}</strong>. Enter your M-Pesa PIN
                   to complete the payment of <strong>KES {Number(form.amount).toLocaleString()}</strong>.
                 </p>
-                <div className="inline-flex items-center gap-2 text-orange-700 text-sm font-semibold">
+                <div className="inline-flex items-center gap-2 text-orange-900 text-sm font-semibold">
                   <Loader2 size={16} className="animate-spin" />
                   Waiting for confirmation…
                 </div>
@@ -270,7 +270,7 @@ export default function Payment() {
 
             {stage === 'paid' && (
               <div className="py-10 text-center">
-                <div className="mx-auto w-20 h-20 rounded-full bg-green-100 flex items-center justify-center mb-5">
+                <div className="mx-auto w-20 h-20 rounded-full bg-orange-100 flex items-center justify-center mb-5">
                   <CheckCircle2 size={42} className="text-green-600" />
                 </div>
                 <h3 className="text-xl font-bold text-stone-900 mb-2">Payment Successful!</h3>
@@ -292,7 +292,7 @@ export default function Payment() {
                   </button>
                   <Link
                     to="/payments"
-                    className="px-6 py-2.5 bg-orange-600 text-white rounded-full font-semibold hover:bg-orange-700 transition-colors text-sm"
+                    className="px-6 py-2.5 bg-orange-800 text-white rounded-full font-semibold hover:bg-orange-900 transition-colors text-sm"
                   >
                     View All Payments
                   </Link>
@@ -311,7 +311,7 @@ export default function Payment() {
                 </p>
                 <button
                   onClick={reset}
-                  className="px-6 py-2.5 bg-orange-600 text-white rounded-full font-semibold hover:bg-orange-700 transition-colors text-sm"
+                  className="px-6 py-2.5 bg-orange-800 text-white rounded-full font-semibold hover:bg-orange-900 transition-colors text-sm"
                 >
                   Try Again
                 </button>

@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+﻿import { useEffect, useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import {
   Receipt, Search, RefreshCw, Loader2, AlertCircle, CheckCircle2,
@@ -82,7 +82,7 @@ export default function Payments() {
 
         <header className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
           <div>
-            <span className="inline-block px-3 py-1 text-xs font-bold text-orange-700 bg-orange-100 rounded-full uppercase tracking-wide mb-3">
+            <span className="inline-block px-3 py-1 text-xs font-bold text-orange-900 bg-orange-100 rounded-full uppercase tracking-wide mb-3">
               Confirmed Payments
             </span>
             <h1 className="text-3xl sm:text-4xl font-extrabold text-stone-900">
@@ -95,7 +95,7 @@ export default function Payments() {
           </div>
           <Link
             to="/pay"
-            className="self-start sm:self-auto px-5 py-2.5 bg-orange-600 text-white rounded-full font-bold hover:bg-orange-700 transition-colors text-sm whitespace-nowrap"
+            className="self-start sm:self-auto px-5 py-2.5 bg-orange-800 text-white rounded-full font-bold hover:bg-orange-900 transition-colors text-sm whitespace-nowrap"
           >
             Pay School Fees →
           </Link>
@@ -128,7 +128,7 @@ export default function Payments() {
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder="Search by name, email, receipt no., or amount…"
-                className="w-full pl-10 pr-4 py-2.5 rounded-xl border-2 border-stone-200 text-sm bg-white outline-none focus:border-orange-600 transition-colors"
+                className="w-full pl-10 pr-4 py-2.5 rounded-xl border-2 border-stone-200 text-sm bg-white outline-none focus:border-orange-800 transition-colors"
               />
             </div>
             <button
@@ -152,14 +152,14 @@ export default function Payments() {
               <p className="text-stone-500 text-sm mt-1">{error}</p>
               <button
                 onClick={load}
-                className="mt-5 px-5 py-2 bg-orange-600 text-white rounded-full font-semibold text-sm hover:bg-orange-700 transition-colors"
+                className="mt-5 px-5 py-2 bg-orange-800 text-white rounded-full font-semibold text-sm hover:bg-orange-900 transition-colors"
               >
                 Try again
               </button>
             </div>
           ) : loading && payments.length === 0 ? (
             <div className="p-16 text-center text-stone-500">
-              <Loader2 size={28} className="mx-auto mb-3 animate-spin text-orange-600" />
+              <Loader2 size={28} className="mx-auto mb-3 animate-spin text-orange-800" />
               Loading payments…
             </div>
           ) : filtered.length === 0 ? (
@@ -171,7 +171,7 @@ export default function Payments() {
               {!query && (
                 <p className="text-sm mt-1">
                   Be the first —{' '}
-                  <Link to="/pay" className="text-orange-600 font-semibold hover:underline">
+                  <Link to="/pay" className="text-orange-800 font-semibold hover:underline">
                     pay school fees now
                   </Link>
                   .
@@ -204,7 +204,7 @@ export default function Payments() {
                         <Td className="font-mono text-xs text-stone-700">{p.mpesaReceipt || '—'}</Td>
                         <Td className="text-stone-600">{formatDate(p.paidAt)}</Td>
                         <Td>
-                          <span className="inline-flex items-center gap-1 text-xs font-bold text-green-700 bg-green-100 px-2.5 py-1 rounded-full">
+                          <span className="inline-flex items-center gap-1 text-xs font-bold text-orange-800 bg-orange-100 px-2.5 py-1 rounded-full">
                             <CheckCircle2 size={12} /> Paid
                           </span>
                         </Td>
@@ -223,7 +223,7 @@ export default function Payments() {
                         <p className="font-bold text-stone-900">{p.name}</p>
                         <p className="text-stone-500 text-xs">{p.email}</p>
                       </div>
-                      <span className="inline-flex items-center gap-1 text-[10px] font-bold text-green-700 bg-green-100 px-2 py-1 rounded-full">
+                      <span className="inline-flex items-center gap-1 text-[10px] font-bold text-orange-800 bg-orange-100 px-2 py-1 rounded-full">
                         <CheckCircle2 size={10} /> Paid
                       </span>
                     </div>
@@ -247,7 +247,7 @@ export default function Payments() {
 function StatCard({ icon, label, value, small }) {
   return (
     <div className="bg-white rounded-2xl border border-stone-100 p-5 flex items-center gap-4">
-      <div className="w-11 h-11 rounded-xl bg-orange-100 text-orange-700 flex items-center justify-center flex-shrink-0">
+      <div className="w-11 h-11 rounded-xl bg-orange-100 text-orange-900 flex items-center justify-center flex-shrink-0">
         {icon}
       </div>
       <div className="min-w-0">

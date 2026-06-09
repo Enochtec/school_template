@@ -1,8 +1,8 @@
-import { Link } from 'react-router-dom'
+﻿import { Link } from 'react-router-dom'
 import { CheckCircle, Star, Sunrise, Sunset, Utensils, Bus, ClipboardList } from 'lucide-react'
 
 const Tag = ({ children }) => (
-  <span className="inline-block px-3 py-1 text-xs font-bold text-orange-700 bg-orange-100 rounded-full uppercase tracking-wide mb-3">
+  <span className="inline-block px-3 py-1 text-xs font-bold text-orange-900 bg-orange-100 rounded-full uppercase tracking-wide mb-3">
     {children}
   </span>
 )
@@ -57,7 +57,7 @@ const extras = [
 ]
 
 const accentMap = {
-  orange: { bg: 'bg-orange-50', border: 'border-orange-200', icon: 'bg-orange-100 text-orange-700', badge: 'bg-orange-100 text-orange-700' },
+  orange: { bg: 'bg-orange-50', border: 'border-orange-200', icon: 'bg-orange-100 text-orange-900', badge: 'bg-orange-100 text-orange-900' },
   teal:   { bg: 'bg-teal-50',   border: 'border-teal-200',   icon: 'bg-teal-100 text-teal-600',     badge: 'bg-teal-100 text-teal-700' },
   violet: { bg: 'bg-violet-50', border: 'border-violet-200', icon: 'bg-violet-100 text-violet-600', badge: 'bg-violet-100 text-violet-700' },
 }
@@ -98,7 +98,7 @@ export default function Programs() {
                 <div className={`lg:col-span-2 ${i % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}`}>
                   <span className={`inline-block px-3 py-0.5 text-xs font-semibold rounded-full mb-3 ${a.badge}`}>{prog.ages}</span>
                   <h2 className="text-2xl font-bold text-stone-900 mb-1">{prog.name}</h2>
-                  <p className="text-orange-700 font-medium text-sm mb-3">{prog.tagline}</p>
+                  <p className="text-orange-900 font-medium text-sm mb-3">{prog.tagline}</p>
                   <p className="text-stone-500 leading-relaxed mb-5">{prog.desc}</p>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
                     <div>
@@ -106,7 +106,7 @@ export default function Programs() {
                       <ul className="space-y-1.5">
                         {prog.activities.map((a) => (
                           <li key={a} className="flex items-center gap-2 text-sm text-stone-700">
-                            <CheckCircle size={13} className="text-orange-600 flex-shrink-0" />{a}
+                            <CheckCircle size={13} className="text-orange-800 flex-shrink-0" />{a}
                           </li>
                         ))}
                       </ul>
@@ -122,7 +122,7 @@ export default function Programs() {
                       </ul>
                     </div>
                   </div>
-                  <Link to="/contact" className="inline-block px-6 py-2.5 bg-orange-600 text-white rounded-full text-sm font-semibold hover:bg-orange-700 transition-colors">
+                  <Link to="/contact" className="inline-block px-6 py-2.5 bg-orange-800 text-white rounded-full text-sm font-semibold hover:bg-orange-900 transition-colors">
                     Enroll in {prog.name}
                   </Link>
                 </div>
@@ -143,9 +143,9 @@ export default function Programs() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {extras.map((e) => (
               <div key={e.title} className="bg-orange-50 border border-stone-200 rounded-2xl p-6 text-center hover:shadow-lg transition-shadow">
-                <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center text-orange-700 mx-auto mb-3">{e.icon}</div>
+                <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center text-orange-900 mx-auto mb-3">{e.icon}</div>
                 <h3 className="font-bold text-stone-900 mb-1">{e.title}</h3>
-                <p className="text-orange-700 text-xs font-semibold mb-1">{e.time}</p>
+                <p className="text-orange-900 text-xs font-semibold mb-1">{e.time}</p>
                 <p className="text-stone-500 text-sm">{e.desc}</p>
               </div>
             ))}
@@ -157,7 +157,7 @@ export default function Programs() {
       <section className="py-12">
         <div className="max-w-6xl mx-auto px-6">
           <div className="bg-orange-50 border border-orange-200 rounded-2xl p-8 flex items-start gap-5">
-            <div className="w-14 h-14 bg-orange-600 rounded-xl flex items-center justify-center text-white flex-shrink-0">
+            <div className="w-14 h-14 bg-orange-800 rounded-xl flex items-center justify-center text-white flex-shrink-0">
               <ClipboardList size={28} />
             </div>
             <div>

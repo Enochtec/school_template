@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+﻿import { useState, useEffect } from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import { Sprout, Menu, X } from 'lucide-react'
 
@@ -14,8 +14,8 @@ const links = [
 const navLinkClass = ({ isActive }) =>
   `block px-3.5 py-2 rounded-lg text-sm font-medium transition-colors ${
     isActive
-      ? 'text-white bg-orange-700'
-      : 'text-orange-100 hover:text-white hover:bg-orange-700'
+      ? 'text-white bg-orange-900'
+      : 'text-orange-100 hover:text-white hover:bg-orange-900'
   }`
 
 export default function Navbar() {
@@ -29,7 +29,7 @@ export default function Navbar() {
   }, [])
 
   return (
-    <nav className={`sticky top-0 z-50 bg-orange-600 transition-all duration-300 ${scrolled ? 'shadow-lg' : ''}`}>
+    <nav className={`sticky top-0 z-50 bg-orange-800 transition-all duration-300 ${scrolled ? 'shadow-lg' : ''}`}>
       <div className="max-w-6xl mx-auto px-6 h-[70px] flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2.5">
@@ -52,7 +52,7 @@ export default function Navbar() {
             </li>
           ))}
           <li>
-            <Link to="/pay" className="ml-2 px-5 py-2 bg-white text-orange-700 rounded-full text-sm font-bold hover:bg-orange-50 transition-colors">
+            <Link to="/pay" className="ml-2 px-5 py-2 bg-white text-orange-900 rounded-full text-sm font-bold hover:bg-orange-50 transition-colors">
               Pay School Fees
             </Link>
           </li>
@@ -60,7 +60,7 @@ export default function Navbar() {
 
         {/* Hamburger */}
         <button
-          className="md:hidden p-2 text-white rounded-lg hover:bg-orange-700 transition-colors"
+          className="md:hidden p-2 text-white rounded-lg hover:bg-orange-900 transition-colors"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
@@ -70,7 +70,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden bg-orange-700 px-6 py-4 flex flex-col gap-1">
+        <div className="md:hidden bg-orange-900 px-6 py-4 flex flex-col gap-1">
           {links.map(({ to, label }) => (
             <NavLink key={to} to={to} end={to === '/'} className={navLinkClass} onClick={() => setMenuOpen(false)}>
               {label}
@@ -78,7 +78,7 @@ export default function Navbar() {
           ))}
           <Link
             to="/pay"
-            className="mt-2 px-4 py-2.5 bg-white text-orange-700 rounded-xl text-sm font-bold hover:bg-orange-50 transition-colors text-center"
+            className="mt-2 px-4 py-2.5 bg-white text-orange-900 rounded-xl text-sm font-bold hover:bg-orange-50 transition-colors text-center"
             onClick={() => setMenuOpen(false)}
           >
             Pay School Fees

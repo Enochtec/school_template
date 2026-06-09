@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+﻿import { Link } from 'react-router-dom'
 import { Sprout, MapPin, Phone, Mail, Clock, Globe, MessageSquare, Camera, MessageCircle } from 'lucide-react'
 
 const social = [
@@ -24,7 +24,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2.5 mb-4">
-              <div className="w-9 h-9 bg-orange-600 rounded-lg flex items-center justify-center text-white flex-shrink-0">
+              <div className="w-9 h-9 bg-orange-800 rounded-lg flex items-center justify-center text-white flex-shrink-0">
                 <Sprout size={16} />
               </div>
               <span className="font-bold text-white text-base">Sunshine ECDE School</span>
@@ -35,7 +35,7 @@ export default function Footer() {
             <div className="flex gap-2">
               {social.map(({ icon, label }) => (
                 <a key={label} href="#" aria-label={label}
-                  className="w-9 h-9 rounded-lg bg-stone-800 flex items-center justify-center text-stone-400 hover:bg-orange-700 hover:text-white transition-colors">
+                  className="w-9 h-9 rounded-lg bg-stone-800 flex items-center justify-center text-stone-400 hover:bg-orange-900 hover:text-white transition-colors">
                   {icon}
                 </a>
               ))}
@@ -44,11 +44,11 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-white font-semibold text-sm mb-4 pb-2 border-b-2 border-orange-600 inline-block">Quick Links</h4>
+            <h4 className="text-white font-semibold text-sm mb-4 pb-2 border-b-2 border-orange-800 inline-block">Quick Links</h4>
             <ul className="space-y-2.5">
               {[['/', 'Home'], ['/about', 'About Us'], ['/programs', 'Programs'], ['/gallery', 'Gallery'], ['/contact', 'Contact']].map(([to, label]) => (
                 <li key={to}>
-                  <Link to={to} className="text-sm text-stone-400 hover:text-orange-400 transition-colors">{label}</Link>
+                  <Link to={to} className="text-sm text-stone-400 hover:text-orange-600 transition-colors">{label}</Link>
                 </li>
               ))}
             </ul>
@@ -56,11 +56,11 @@ export default function Footer() {
 
           {/* Programs */}
           <div>
-            <h4 className="text-white font-semibold text-sm mb-4 pb-2 border-b-2 border-orange-600 inline-block">Programs</h4>
+            <h4 className="text-white font-semibold text-sm mb-4 pb-2 border-b-2 border-orange-800 inline-block">Programs</h4>
             <ul className="space-y-2.5">
               {['Playgroup (Ages 2–3)', 'PP1 (Ages 4–5)', 'PP2 (Ages 5–6)', 'After-School Care'].map((p) => (
                 <li key={p}>
-                  <Link to="/programs" className="text-sm text-stone-400 hover:text-orange-400 transition-colors">{p}</Link>
+                  <Link to="/programs" className="text-sm text-stone-400 hover:text-orange-600 transition-colors">{p}</Link>
                 </li>
               ))}
             </ul>
@@ -68,11 +68,11 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-white font-semibold text-sm mb-4 pb-2 border-b-2 border-orange-600 inline-block">Contact Info</h4>
+            <h4 className="text-white font-semibold text-sm mb-4 pb-2 border-b-2 border-orange-800 inline-block">Contact Info</h4>
             <ul className="space-y-3">
               {contactInfo.map(({ icon, text }) => (
                 <li key={text} className="flex items-start gap-2.5">
-                  <span className="text-orange-400 mt-0.5 flex-shrink-0">{icon}</span>
+                  <span className="text-orange-600 mt-0.5 flex-shrink-0">{icon}</span>
                   <span className="text-sm text-stone-400">{text}</span>
                 </li>
               ))}

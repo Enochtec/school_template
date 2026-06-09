@@ -1,8 +1,8 @@
-import { useState } from 'react'
+﻿import { useState } from 'react'
 import { MapPin, Phone, Mail, Clock, Send, CheckCircle, HelpCircle, PhoneCall } from 'lucide-react'
 
 const Tag = ({ children }) => (
-  <span className="inline-block px-3 py-1 text-xs font-bold text-orange-700 bg-orange-100 rounded-full uppercase tracking-wide mb-3">
+  <span className="inline-block px-3 py-1 text-xs font-bold text-orange-900 bg-orange-100 rounded-full uppercase tracking-wide mb-3">
     {children}
   </span>
 )
@@ -25,7 +25,7 @@ const faqs = [
 
 const inputClass = (hasError) =>
   `w-full px-4 py-2.5 rounded-xl border-2 text-sm text-stone-800 bg-white outline-none transition-colors ${
-    hasError ? 'border-red-400' : 'border-stone-200 focus:border-orange-600'
+    hasError ? 'border-red-400' : 'border-stone-200 focus:border-orange-800'
   }`
 
 export default function Contact() {
@@ -68,7 +68,7 @@ export default function Contact() {
         <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {infoCards.map((c) => (
             <div key={c.title} className="bg-white border border-stone-200 rounded-2xl p-6 text-center hover:shadow-lg transition-shadow">
-              <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center text-orange-700 mx-auto mb-3">{c.icon}</div>
+              <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center text-orange-900 mx-auto mb-3">{c.icon}</div>
               <h3 className="font-bold text-stone-900 mb-2">{c.title}</h3>
               {c.lines.map((l) => <p key={l} className="text-stone-500 text-sm">{l}</p>)}
             </div>
@@ -87,11 +87,11 @@ export default function Contact() {
 
             {submitted ? (
               <div className="bg-orange-50 border border-orange-200 rounded-2xl p-8 text-center">
-                <CheckCircle size={48} className="text-orange-600 mx-auto mb-3" strokeWidth={1.5} />
-                <h3 className="text-xl font-bold text-orange-700 mb-2">Message Received!</h3>
+                <CheckCircle size={48} className="text-orange-800 mx-auto mb-3" strokeWidth={1.5} />
+                <h3 className="text-xl font-bold text-orange-900 mb-2">Message Received!</h3>
                 <p className="text-stone-500 mb-5">Thank you, <strong>{form.name}</strong>! We'll get back to you at {form.email} within 24 hours.</p>
                 <button
-                  className="px-6 py-2.5 bg-orange-600 text-white rounded-full font-semibold hover:bg-orange-700 transition-colors text-sm"
+                  className="px-6 py-2.5 bg-orange-800 text-white rounded-full font-semibold hover:bg-orange-900 transition-colors text-sm"
                   onClick={() => { setSubmitted(false); setForm({ name: '', email: '', phone: '', program: '', message: '' }) }}
                 >
                   Send Another Message
@@ -133,7 +133,7 @@ export default function Contact() {
                   <textarea name="message" rows={5} placeholder="Tell us about your child or questions you have…" value={form.message} onChange={handleChange} className={`${inputClass(errors.message)} resize-none`} />
                   {errors.message && <p className="text-red-500 text-xs mt-1">{errors.message}</p>}
                 </div>
-                <button type="submit" className="inline-flex items-center gap-2 px-7 py-3 bg-orange-600 text-white rounded-full font-semibold hover:bg-orange-700 transition-colors text-sm">
+                <button type="submit" className="inline-flex items-center gap-2 px-7 py-3 bg-orange-800 text-white rounded-full font-semibold hover:bg-orange-900 transition-colors text-sm">
                   <Send size={15} /> Send Message
                 </button>
               </form>
@@ -143,11 +143,11 @@ export default function Contact() {
           {/* Sidebar */}
           <div className="lg:col-span-2 flex flex-col gap-5">
             <div className="bg-orange-50 border border-orange-200 rounded-2xl p-8 text-center">
-              <MapPin size={48} className="text-orange-600 mx-auto mb-3" strokeWidth={1.2} />
+              <MapPin size={48} className="text-orange-800 mx-auto mb-3" strokeWidth={1.2} />
               <h3 className="font-bold text-stone-900 mb-1">Find Us Here</h3>
               <p className="text-stone-500 text-sm mb-4">123 School Lane, Westlands, Nairobi</p>
               <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer"
-                className="inline-block px-6 py-2.5 bg-orange-600 text-white rounded-full text-sm font-semibold hover:bg-orange-700 transition-colors">
+                className="inline-block px-6 py-2.5 bg-orange-800 text-white rounded-full text-sm font-semibold hover:bg-orange-900 transition-colors">
                 Open in Google Maps
               </a>
             </div>
@@ -158,11 +158,11 @@ export default function Contact() {
               <ul className="space-y-2 mb-5">
                 {['See classrooms and play areas', 'Meet our teachers', 'Get enrollment questions answered', 'Free and no-obligation'].map((item) => (
                   <li key={item} className="flex items-center gap-2 text-sm text-stone-700">
-                    <CheckCircle size={14} className="text-orange-600 flex-shrink-0" />{item}
+                    <CheckCircle size={14} className="text-orange-800 flex-shrink-0" />{item}
                   </li>
                 ))}
               </ul>
-              <a href="tel:+254700000000" className="inline-flex items-center gap-2 px-6 py-2.5 bg-orange-600 text-white rounded-full text-sm font-semibold hover:bg-orange-700 transition-colors">
+              <a href="tel:+254700000000" className="inline-flex items-center gap-2 px-6 py-2.5 bg-orange-800 text-white rounded-full text-sm font-semibold hover:bg-orange-900 transition-colors">
                 <PhoneCall size={15} /> Call to Book a Tour
               </a>
             </div>
@@ -181,7 +181,7 @@ export default function Contact() {
             {faqs.map(({ q, a }) => (
               <div key={q} className="bg-orange-50 border border-stone-200 rounded-2xl p-5">
                 <div className="flex items-start gap-2.5 mb-2">
-                  <HelpCircle size={16} className="text-orange-600 flex-shrink-0 mt-0.5" />
+                  <HelpCircle size={16} className="text-orange-800 flex-shrink-0 mt-0.5" />
                   <h4 className="font-bold text-stone-900 text-sm">{q}</h4>
                 </div>
                 <p className="text-stone-500 text-sm leading-relaxed pl-6">{a}</p>

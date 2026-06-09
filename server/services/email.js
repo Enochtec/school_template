@@ -38,7 +38,7 @@ export async function sendReceiptEmail(payment) {
   const html = `
   <div style="font-family: Segoe UI, Tahoma, sans-serif; background:#FFFBF5; padding:32px; color:#1c1917;">
     <div style="max-width:580px; margin:0 auto; background:#fff; border-radius:18px; overflow:hidden; box-shadow:0 8px 24px rgba(0,0,0,.06)">
-      <div style="background:#EA580C; padding:28px 32px; color:#fff;">
+      <div style="background:#9a3412; padding:28px 32px; color:#fff;">
         <h1 style="margin:0; font-size:22px; letter-spacing:.3px;">Sunshine ECDE School</h1>
         <p style="margin:6px 0 0; opacity:.9; font-size:13px;">Official Payment Receipt</p>
       </div>
@@ -48,8 +48,8 @@ export async function sendReceiptEmail(payment) {
           We have received your school fees payment. Thank you for trusting Sunshine ECDE School with your child's early years education.
         </p>
 
-        <div style="background:#FFF7ED; border:1px solid #FED7AA; border-radius:14px; padding:18px 20px; margin-bottom:18px;">
-          <h2 style="margin:0 0 12px; font-size:14px; color:#9A3412; text-transform:uppercase; letter-spacing:.5px;">Receipt Details</h2>
+        <div style="background:#fff7ed; border:1px solid #fed7aa; border-radius:14px; padding:18px 20px; margin-bottom:18px;">
+          <h2 style="margin:0 0 12px; font-size:14px; color:#7c2d12; text-transform:uppercase; letter-spacing:.5px;">Receipt Details</h2>
           <table style="width:100%; font-size:14px; color:#292524; border-collapse:collapse;">
             ${row('Receipt No.', payment.mpesaReceipt || payment.id)}
             ${row('Amount Paid', `<strong>${formatKES(payment.amount)}</strong>`)}
@@ -62,7 +62,7 @@ export async function sendReceiptEmail(payment) {
 
         <p style="margin:0 0 6px; font-size:13px; color:#57534e;">
           Keep this email as proof of payment. If you have any questions, reply to this email or call us on
-          <a href="tel:+254700000000" style="color:#EA580C; text-decoration:none;">+254 700 000 000</a>.
+          <a href="tel:+254700000000" style="color:#9a3412; text-decoration:none;">+254 700 000 000</a>.
         </p>
       </div>
       <div style="background:#1C1917; padding:18px 32px; color:#a8a29e; font-size:12px;">

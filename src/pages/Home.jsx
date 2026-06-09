@@ -1,10 +1,10 @@
-import { useState, useEffect } from 'react'
+﻿import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { Award, GraduationCap, Users, BookOpen, Shield, Heart, Utensils, ArrowRight, Star, ChevronLeft, ChevronRight } from 'lucide-react'
 import EnrollModal from '../components/EnrollModal'
 
 const Tag = ({ children }) => (
-  <span className="inline-block px-3 py-1 text-xs font-bold text-orange-700 bg-orange-100 rounded-full uppercase tracking-wide mb-3">
+  <span className="inline-block px-3 py-1 text-xs font-bold text-orange-900 bg-orange-100 rounded-full uppercase tracking-wide mb-3">
     {children}
   </span>
 )
@@ -115,7 +115,7 @@ export default function Home() {
           <div className="max-w-2xl">
             <Tag>Welcome to Sunshine ECDE School</Tag>
             <h1 className="text-4xl lg:text-6xl font-extrabold text-white leading-tight mb-5">
-              Where Little Minds <span className="text-orange-400">Grow Big</span> Dreams
+              Where Little Minds <span className="text-orange-600">Grow Big</span> Dreams
             </h1>
             <p className="text-stone-200 text-lg leading-relaxed mb-10">
               A loving, stimulating environment where children aged 2–6 discover the joy of learning through play, creativity, and exploration.
@@ -123,7 +123,7 @@ export default function Home() {
             <div className="flex flex-wrap gap-4 mb-16">
               <button
                 onClick={() => setEnrollOpen(true)}
-                className="px-8 py-3.5 bg-orange-600 text-white rounded-full font-semibold hover:bg-orange-700 transition-colors text-base"
+                className="px-8 py-3.5 bg-orange-800 text-white rounded-full font-semibold hover:bg-orange-900 transition-colors text-base"
               >
                 Enroll Your Child
               </button>
@@ -135,7 +135,7 @@ export default function Home() {
             <div className="flex flex-wrap gap-8">
               {stats.map((s) => (
                 <div key={s.label} className="flex items-center gap-3">
-                  <div className="text-orange-400">{s.icon}</div>
+                  <div className="text-orange-600">{s.icon}</div>
                   <div>
                     <span className="block text-2xl font-extrabold text-white leading-none">{s.value}</span>
                     <span className="block text-xs text-stone-300 mt-0.5">{s.label}</span>
@@ -166,7 +166,7 @@ export default function Home() {
               />
               <div className="absolute inset-0 bg-stone-950/45 flex flex-col justify-end pointer-events-none">
                 <div className="max-w-6xl mx-auto w-full px-10 pb-10">
-                  <span className="inline-block px-3 py-1 text-xs font-bold text-white bg-orange-600 rounded-full mb-3">{sl.label}</span>
+                  <span className="inline-block px-3 py-1 text-xs font-bold text-white bg-orange-800 rounded-full mb-3">{sl.label}</span>
                   <p className="text-white text-2xl font-semibold max-w-xl">{sl.caption}</p>
                 </div>
               </div>
@@ -207,7 +207,7 @@ export default function Home() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {features.map((f) => (
                 <div key={f.title} className="bg-white rounded-2xl p-5 border border-stone-200 hover:shadow-lg transition-shadow">
-                  <div className="w-10 h-10 bg-orange-100 rounded-xl flex items-center justify-center text-orange-700 mb-3">{f.icon}</div>
+                  <div className="w-10 h-10 bg-orange-100 rounded-xl flex items-center justify-center text-orange-900 mb-3">{f.icon}</div>
                   <h3 className="font-bold text-stone-900 mb-1 text-sm">{f.title}</h3>
                   <p className="text-stone-500 text-xs leading-relaxed">{f.desc}</p>
                 </div>
@@ -236,9 +236,9 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {programs.map((p) => (
-              <div key={p.name} className={`relative rounded-2xl overflow-hidden border-2 hover:shadow-lg transition-shadow ${p.featured ? 'border-orange-600' : 'border-stone-200'}`}>
+              <div key={p.name} className={`relative rounded-2xl overflow-hidden border-2 hover:shadow-lg transition-shadow ${p.featured ? 'border-orange-800' : 'border-stone-200'}`}>
                 {p.featured && (
-                  <span className="absolute top-3 left-1/2 -translate-x-1/2 z-10 px-4 py-1 bg-orange-600 text-white text-xs font-bold rounded-full whitespace-nowrap shadow">
+                  <span className="absolute top-3 left-1/2 -translate-x-1/2 z-10 px-4 py-1 bg-orange-800 text-white text-xs font-bold rounded-full whitespace-nowrap shadow">
                     Most Popular
                   </span>
                 )}
@@ -247,10 +247,10 @@ export default function Home() {
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
                 </div>
                 <div className={`p-6 ${p.featured ? 'bg-orange-50' : ''}`}>
-                  <span className="inline-block px-3 py-0.5 text-xs font-semibold text-orange-700 bg-orange-100 rounded-full mb-3">{p.age}</span>
+                  <span className="inline-block px-3 py-0.5 text-xs font-semibold text-orange-900 bg-orange-100 rounded-full mb-3">{p.age}</span>
                   <h3 className="text-xl font-bold text-stone-900 mb-2">{p.name}</h3>
                   <p className="text-stone-500 text-sm leading-relaxed mb-5">{p.desc}</p>
-                  <Link to="/programs" className="inline-flex items-center gap-1.5 text-sm font-semibold text-orange-700 hover:text-orange-700 transition-colors">
+                  <Link to="/programs" className="inline-flex items-center gap-1.5 text-sm font-semibold text-orange-900 hover:text-orange-900 transition-colors">
                     Learn More <ArrowRight size={14} />
                   </Link>
                 </div>
@@ -276,7 +276,7 @@ export default function Home() {
                 </div>
                 <p className="text-stone-600 text-sm leading-relaxed italic mb-5">"{t.text}"</p>
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-orange-600 text-white rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">
+                  <div className="w-10 h-10 bg-orange-800 text-white rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">
                     {t.name.charAt(0)}
                   </div>
                   <div>
@@ -297,7 +297,7 @@ export default function Home() {
             <h2 className="text-3xl font-bold text-white mb-3">Ready to Enroll Your Child?</h2>
             <p className="text-stone-400 mb-8 max-w-lg mx-auto">Admissions are open for the 2026 academic year. Spaces are limited — secure your child's spot today.</p>
             <div className="flex justify-center gap-4 flex-wrap">
-              <button onClick={() => setEnrollOpen(true)} className="px-7 py-3 bg-orange-600 text-white rounded-full font-semibold hover:bg-orange-700 transition-colors">Apply Now</button>
+              <button onClick={() => setEnrollOpen(true)} className="px-7 py-3 bg-orange-800 text-white rounded-full font-semibold hover:bg-orange-900 transition-colors">Apply Now</button>
               <Link to="/programs" className="px-7 py-3 border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-stone-900 transition-colors">View Programs</Link>
             </div>
           </div>

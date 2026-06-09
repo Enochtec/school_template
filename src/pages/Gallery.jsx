@@ -1,8 +1,8 @@
-import { useState } from 'react'
+﻿import { useState } from 'react'
 import { X, ZoomIn, ImageOff } from 'lucide-react'
 
 const Tag = ({ children }) => (
-  <span className="inline-block px-3 py-1 text-xs font-bold text-orange-700 bg-orange-100 rounded-full uppercase tracking-wide mb-3">
+  <span className="inline-block px-3 py-1 text-xs font-bold text-orange-900 bg-orange-100 rounded-full uppercase tracking-wide mb-3">
     {children}
   </span>
 )
@@ -78,8 +78,8 @@ export default function Gallery() {
                 onClick={() => setActiveCategory(cat)}
                 className={`px-4 py-1.5 rounded-full text-sm font-medium border-2 transition-colors ${
                   activeCategory === cat
-                    ? 'bg-orange-600 border-orange-600 text-white'
-                    : 'border-stone-200 text-stone-600 hover:border-orange-600 hover:text-orange-700'
+                    ? 'bg-orange-800 border-orange-800 text-white'
+                    : 'border-stone-200 text-stone-600 hover:border-orange-800 hover:text-orange-900'
                 }`}
               >
                 {cat}
@@ -152,7 +152,7 @@ export default function Gallery() {
                 <h3 className="font-bold text-stone-900">{selected.title}</h3>
                 <span className="text-sm text-stone-400">{selected.cat}</span>
               </div>
-              <span className="px-3 py-1 text-xs font-bold text-orange-700 bg-orange-100 rounded-full">{selected.cat}</span>
+              <span className="px-3 py-1 text-xs font-bold text-orange-900 bg-orange-100 rounded-full">{selected.cat}</span>
             </div>
           </div>
         </div>
@@ -165,7 +165,7 @@ export default function Gallery() {
             <h2 className="text-3xl font-bold text-white mb-3">Want to See More?</h2>
             <p className="text-stone-400 mb-8 max-w-md mx-auto">Follow us on social media for daily updates, or visit us for a school tour.</p>
             <div className="flex justify-center gap-4 flex-wrap">
-              <a href="#" className="px-7 py-3 bg-orange-600 text-white rounded-full font-semibold hover:bg-orange-700 transition-colors">Follow on Facebook</a>
+              <a href="#" className="px-7 py-3 bg-orange-800 text-white rounded-full font-semibold hover:bg-orange-900 transition-colors">Follow on Facebook</a>
               <a href="#" className="px-7 py-3 border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-stone-900 transition-colors">Follow on Instagram</a>
             </div>
           </div>
